@@ -7,7 +7,7 @@ const flightSchema = new Schema({
         type: String,
         enum: ['American', 'Southwest', 'United']
     },
-    airpot: {
+    airport: {
         type: String,
         enum: ['AUS', 'DFW', 'DEN', 'LAX', 'SAN']
     },
