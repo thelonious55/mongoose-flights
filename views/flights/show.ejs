@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main> 
+        <section id="show-page">
+            <div>Airline: </div>
+			<div>
+				<%= flight.airline %>
+			</div>
+			<div>Airport: </div>
+			<div>
+				<%= flight.airport %>
+			</div>
+			<div>Flight Number: </div>
+			<div>
+				<%= flight.flightNo %>
+			</div>
+			<div>Departs: </div>
+			<div>
+				<%= flight.departs %>
+			</div> 
+			<div>Arrives: </div>
+			<div>
+				<%= flight.destinations[0].airport %> <%= flight.destinations[0].arrival %> 
+			</div>
+        </section>
+
+        <br><br>
+		<h2>Arrives</h2>
+		<form id="add-review-form" method="POST" action="/flights/<%= flight._id %>/departs">
+			
+			
+			<select name="airport">
+				<option value="AUS">AUS</option>
+				<option value="DFW">DFW</option>
+				<option value="DEN">DEN</option>
+				<option value="LAX">LAX</option>
+				<option value="SAN" selected>SAN</option>
+			</select>
+			<input type="date" name="Time">
+			<input type="submit" value="Add Arrival">
+		</form>
+    </main>
+</body>
+</html>
